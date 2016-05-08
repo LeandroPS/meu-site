@@ -3,6 +3,10 @@
 		if($("section:not(.introducao, .up)").size() > 0){
 			//console.log("foi");
 			$("section:not(.introducao, .up)").first().addClass("up");
+			/*$('section.up').animate({
+			  scrollTop: 0
+			}, 1000);*/
+			$('section.up').delay(1000).addClass("scrollable");
 		}
 	}
 
@@ -10,6 +14,10 @@
 		if($("section.up:not(.introducao)").size() > 0){
 			//console.log("foi");
 			$("section.up:not(.introducao)").last().removeClass("up");
+//			$('section.up').animate({
+//			  scrollTop: 0
+//			}, 1000);
+			$('section.up').delay(1000).addClass("scrollable");
 		}
 	}
 
@@ -20,9 +28,11 @@ $(function(){
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
 		if ((event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) && terminou) {
 			$(this).trigger("upscroll");
+			
 		}
-		else if(terminou){
+		else if(terminou && ($("section.up:last-child div.container").scrollTop() == $("section.up:last-child div.container").height())){
 			$(this).trigger("downscroll");
+			
 		}
 		terminou = false;
 		clearTimeout($.data(this, 'timer'));

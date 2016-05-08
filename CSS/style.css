@@ -13,12 +13,17 @@ body{
 
 section{
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	border-radius: 5px;
 	transition: top 1s, filter 1s;
 	filter: blur(0px);
+	overflow-y: hidden;
 	
 }
+
+	section.scrollable{
+		overflow-y: scroll;
+	}
 
 	section.blurred{
 		filter: blur(3px);
@@ -69,6 +74,16 @@ section{
 				font-weight: 300;
 			}
 
+@media only screen and (max-width: 463px) {
+	section.introducao div.title-container h1{
+		font-size: 24px;
+	}
+
+	section.introducao div.title-container h2{
+		font-size: 18px;
+	}
+}
+
 
 
 	section.linha-do-tempo{
@@ -85,6 +100,7 @@ section{
 			border-top: 4px solid;
 			border-color: #fff;
 			width: 516px;
+			max-width: calc(100% - 4px - 36px - 24px - 20px);
 			left: 50%;
 			top: 50%;
 			position: absolute;
@@ -181,6 +197,104 @@ section{
 								margin: 0px;
 							}
 
+	@media only screen and (max-width: 622px) {
+		section.linha-do-tempo ul{
+			border-left: 4px solid;
+			border-top: 0px solid;
+			border-color: #fff;
+			height: 516px;
+			width: 300px;
+			left: calc(50% + 40px);
+			top: 50%;
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			
+			padding: 0px;
+			margin: 0px;
+			margin-top: 35px;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+			section.linha-do-tempo ul li{
+				display: block;
+				height: 99px;
+				width: 250px;
+				position: relative;
+			}
+
+				section.linha-do-tempo ul li:after{
+					content: "";
+					width: 10px;
+					border-radius: 50%;
+					background-color: #fff;
+					display: block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					height: 10px;
+					left: -7px;
+				}
+
+				section.linha-do-tempo ul li:before{
+					content: attr(data-ano);
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -59px;
+					
+					border-bottom: 2px solid;
+					
+					color: #fff;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 600;
+					
+					cursor: pointer;
+				}
+		
+					section.linha-do-tempo ul li div.evento{
+						position: absolute;
+						width: 250px;
+						top: 50%;
+						transform: translateY(-50%);
+						background: #fff;
+						
+						box-sizing: border-box;
+						padding: 10px;
+						border-radius: 5px;
+						
+						display: block;
+						left: 40px;
+						opacity: 0;
+						transition: opacity 1s, left 2s;
+					}
+
+						section.linha-do-tempo ul li.ativo div.evento{
+							left: 20px;
+							top: 50%;
+							display: block;
+							opacity: 1;
+							transition: opacity 1s, left 1s;
+						}
+
+						section.linha-do-tempo ul li div.evento:before{
+							content: "";
+							width: 0px;
+							height: 0px;
+							border-top: 10px solid transparent;
+							border-bottom: 10px solid transparent;
+							border-right: 10px solid #fff;
+							border-left: 10px solid transparent;
+							position: absolute;
+							top: 50%;
+							left: -19px;
+							transform: translateY(-50%);
+						}
+	}
+
+
 	section.portfolio{
 		background: #4CAF50;
 		height: calc(100% - 20px);
@@ -191,14 +305,22 @@ section{
 			top:20px;
 		}
 
+		section.portfolio div.container{
+			overflow: hidden;
+			width: 800px;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
+			max-width: 100%;
+		}
+
 		section.portfolio ul.lista-portfolio{
 			margin: 0px;
-			padding-left: 40px;
 			
 			top: 50%;
 /* 			transform: translateY(-50%);*/
 /*			position: absolute;*/
-			
+			padding: 0px 20px;
 			display: inline-block;
 			float: left;
 		}
@@ -227,8 +349,9 @@ section{
 				display: inline-block;
 				float: left;
 				width: 480px;
-				margin-left: 20px;
+				max-width: calc(100% - 380px);
 				color: #fff;
+				margin-right: 20px;
 			}
 
 				section.portfolio div.detalhes h1{
@@ -260,6 +383,23 @@ section{
 						height: 100px;
 					}
 
+@media only screen and (max-width: 680px) {
+
+	section.portfolio ul.lista-portfolio{
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+	}
+	
+	section.portfolio div.detalhes{
+		width: 100%;
+		max-width: none;
+		padding: 0px 20px;
+		box-sizing: border-box;
+		margin-right: 0px;
+	}
+}
+
 	section.contato{
 		background: #FF9800;
 		height: calc(100% - 30px);
@@ -275,27 +415,34 @@ section{
 			top: 50%;
 			left: 50%;
 			transform: translateX(-50%) translateY(-50%);
+			
+			max-width: 100%;
 		}
 
 		section.contato ul.redes{
 			display: flex;
 			flex-direction: row;
-			width: 350px;
+			width: 450px;
 			justify-content: space-between;
 			
 			position: relative;
 			left: 50%;
 			transform: translateX(-50%);
 			
+			max-width: calc(100% - 120px);
+			
 			padding: 0px;
+			margin: 0px;
 		}
 
 			section.contato ul.redes li{
 				display: inline-block;
 				
-				width: 15px;
-				height: 15px;
+				width: 32px;
+				height: 32px;
+				text-align: center;
 				color: #fff;
+				margin-bottom: 20px;
 			}
 
 				section.contato ul.redes li a, section.contato ul.redes li a:active, section.contato ul.redes li a:visited{
@@ -303,55 +450,80 @@ section{
 					text-decoration: none;
 				}
 
-		section.contato form{
-			position: relative;
-			left: 50%;
-			transform: translateX(-50%);
-			display: block;
-			width: 500px;
-			text-align: center;
-			
-			margin-top: 50px;
+		section.contato div.mail{
+			max-width: 100%;
+			padding: 0px 20px;
 		}
 
-			section.contato form input, section.contato form textarea{
-				display: block;				
-				width: 100%;
-				padding: 5px;
-				box-sizing: border-box;
-				outline: none;
-				resize: none;
-				
-				border: 0px;
-				border-radius: 3px;
-				margin-top: 5px;
+			section.contato form{
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+				display: block;
+				width: 500px;
+				max-width: 100%;
+				text-align: center;
+
 			}
 
-			section.contato form input{
-				height: 30px;
-			}
+				section.contato form input, section.contato form textarea{
+					display: block;				
+					width: 100%;
+					padding: 5px;
+					box-sizing: border-box;
+					outline: none;
+					resize: none;
 
-			section.contato form textarea{
-				height: 150px;
-			}
+					border: 0px;
+					border-radius: 3px;
+					margin-top: 5px;
+				}
 
-			section.contato form button{
-				border: 0px;
-				border-radius: 3px;
-				margin-top: 5px;
-				background-color: rgba(255, 255, 255, 0.3);
+				section.contato form input{
+					height: 30px;
+				}
+
+				section.contato form textarea{
+					height: 150px;
+				}
+
+				section.contato form button{
+					border: 0px;
+					border-radius: 3px;
+					margin-top: 5px;
+					background-color: rgba(255, 255, 255, 0.3);
+
+					height: 45px;
+					color: #fff;
+					padding: 0px 10px;
+
+					height: 45px;
+					font-size: 16px;
+					float: left;
+					margin-top: 10px;
+					color: #fff;
+					padding: 0px 20px;
+				}
+	@media only screen and (max-width: 520px) {
+		section.contatos div.container{
+			width: 100%;
+			
+		}
+		
+			section.contatos div.container div.mail{
 				
-				height: 45px;
-				color: #fff;
-				padding: 0px 10px;
-				
-				height: 45px;
-				font-size: 16px;
-				float: left;
-				margin-top: 10px;
-				color: #fff;
-				padding: 0px 20px;
 			}
+	}
+
+	@media only screen and (max-width: 470px) {
+		section.contato ul.redes{
+			flex-wrap: wrap;
+		}
+		
+			section.contato ul.redes li{
+				width: 25%;
+			}
+	}
 
 div.img-container{
 	position: fixed;
