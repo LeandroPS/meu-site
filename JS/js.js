@@ -45,7 +45,7 @@ $(function(){
 	
 	lastScrollTop = 0;
 	
-	/*
+	
 	$(window).on("scrollstart", function(event){
 	   var st = $(this).scrollTop();
 	   if (st > lastScrollTop){
@@ -55,7 +55,10 @@ $(function(){
 	   }
 	   lastScrollTop = st;
 	});
-	*/
+	
+	$('#mydiv').on('swipedown',function(){nxtSection();} );
+	$('#mydiv').on('swipeup',function(){prevSection();} );
+	
 	$(window).on("downscroll", function(){
 		nxtSection();
 	});
