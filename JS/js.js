@@ -28,7 +28,7 @@ $(function(){
 		clearTimeout($.data(this, 'timer'));
 		$.data(this, 'timer', setTimeout(function() {
 			terminou = true;
-		}, 250));
+		}, 50));
 	});
 	
 
@@ -74,5 +74,16 @@ $(function(){
 	$("section.linha-do-tempo ul li").click(function(){
 		$("section.linha-do-tempo ul li").removeClass("ativo");
 		$(this).addClass("ativo");
+	});
+	
+	$("section.portfolio div.detalhes img").click(function(){
+		$("div.img-container img").attr('src', $(this).attr('src'));
+		$("div.img-container").addClass("up");
+		$("section").addClass("blurred");
+	});
+	
+	$("div.img-container").click(function(){
+		$(this).removeClass("up");
+		$("section").removeClass("blurred");
 	});
 });
