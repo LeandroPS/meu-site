@@ -56,8 +56,8 @@ $(function(){
 	   lastScrollTop = st;
 	});
 	
-	$('#mydiv').on('swipedown',function(){nxtSection();} );
-	$('#mydiv').on('swipeup',function(){prevSection();} );
+	$(window).on('swipedown',function(){nxtSection();} );
+	$(window).on('swipeup',function(){prevSection();} );
 	
 	$(window).on("downscroll", function(){
 		nxtSection();

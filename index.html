@@ -15,6 +15,14 @@
 		<script src="JS/jquery.mousewheel.min.js"></script>
 		<script src="JS/jquery.mobile-1.4.5.min.js"></script>
 		<script src="JS/js.js"></script>
+		<script>
+			$(document).bind('mobileinit',function(){
+				jQuery.mobile.autoInitializePage = false;
+				$.mobile.changePage.defaults.changeHash = false;
+				$.mobile.hashListeningEnabled = false;
+				$.mobile.pushStateEnabled = false;
+			});
+		</script> 
 		
 	</head>
 	<body>
