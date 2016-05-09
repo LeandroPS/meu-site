@@ -24,6 +24,10 @@
 $(function(){
 	terminou = true;
 	var timer;
+	
+	$( document ).on( "mobileinit", function() {
+		$.mobile.loader.prototype.options.disabled = true;
+	});
 
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
 		if ((event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) && terminou) {
@@ -38,7 +42,7 @@ $(function(){
 		clearTimeout($.data(this, 'timer'));
 		$.data(this, 'timer', setTimeout(function() {
 			terminou = true;
-		}, 50));
+		}, 75));
 	});
 	
 
@@ -56,8 +60,14 @@ $(function(){
 	   lastScrollTop = st;
 	});
 	
-	$(window).on('swipedown',function(){nxtSection();} );
-	$(window).on('swipeup',function(){prevSection();} );
+	$(window).on('swipedown',function(){ 
+		nxtSection();
+		console.log("swipedown");
+	});
+	$(window).on('swipeup',function(){
+		prevSection();
+		console.log("swipeup");
+	});
 	
 	$(window).on("downscroll", function(){
 		nxtSection();
