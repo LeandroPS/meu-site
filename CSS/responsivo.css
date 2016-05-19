@@ -1,0 +1,31 @@
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 500%;
+	
+}
+
+section{
+	position: absolute;
+}
+
+	section.introducao{
+		position: fixed;
+		top: 0px;
+	}
+
+
+	section.linha-do-tempo{
+		top: 100%;
+		
+	}
+
+
+	section.portfolio{
+		top: 200%;
+		
+	}
+
+	section.contato{
+		top: 300%;
+	}

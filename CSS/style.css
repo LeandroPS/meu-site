@@ -4,22 +4,38 @@
     text-rendering: optimizeLegibility;
 }
 
+/*
+::-webkit-scrollbar { 
+    display: none; 
+}
+*/
+
 body{
 	margin: 0 auto;
-	height: calc(100% + 1px);
 	overflow: hidden;
 	font-family: 'Open Sans', sans-serif;
+}
+
+div.tudo{
+	height: 400%;
 }
 
 section{
 	width: 100%;
 	position: fixed;
 	border-radius: 5px;
-	transition: top 1s, filter 1s;
+	/*transition: top 1s, filter 1s;*/
 	filter: blur(0px);
-	overflow-y: hidden;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	
+	border-top: 10px solid;
 	
 }
+
+	section.up{
+		position: fixed;	
+	}
 
 	section.scrollable{
 		overflow-y: scroll;
@@ -46,6 +62,8 @@ section{
 		background-image: url(../Imagens/photo-1421757295538-9c80958e75b0.jpg);
 		background-size: cover;
 		background-position: center;
+		
+		border: none;
 	}
 
 		section.introducao div.title-container{
@@ -88,12 +106,15 @@ section{
 
 	section.linha-do-tempo{
 		background: #2196F3;
+		border-color: #2196F3;
 		height: calc(100% - 10px);
 		top: 100%;
 	}
 
 		section.linha-do-tempo.up{
 			top:10px;
+			/**/
+			
 		}
 
 		section.linha-do-tempo ul{
@@ -195,6 +216,7 @@ section{
 							section.linha-do-tempo ul li div.evento p{
 								font-size: 12px;
 								margin: 0px;
+								text-align: justify;
 							}
 
 	@media only screen and (max-width: 622px) {
@@ -297,6 +319,7 @@ section{
 
 	section.portfolio{
 		background: #4CAF50;
+		border-color: #4CAF50;
 		height: calc(100% - 20px);
 		top: 100%;
 	}
@@ -376,7 +399,7 @@ section{
 					}
 
 				section.portfolio div.detalhes div.photos{
-					
+					margin-bottom: 50px;
 				}
 
 					section.portfolio div.detalhes div.photos img{
@@ -402,6 +425,7 @@ section{
 
 	section.contato{
 		background: #FF9800;
+		border-color: #FF9800;
 		height: calc(100% - 30px);
 		top: 100%;
 	}
@@ -449,6 +473,53 @@ section{
 					color: #fff;
 					text-decoration: none;
 				}
+
+		div.contact-address{
+			width: calc(100% - 40px);
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 50px;
+			background-color: rgba(0,0,0,0.1);
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+			margin-bottom: 10px;
+			
+		}
+
+			div.contact-address::after{
+				content: "";
+				width: 0px;
+				height: 0px;
+
+				border-top: 15px solid transparent; 
+				border-bottom: 15px solid rgba(0,0,0,0.1);
+				border-right: 15px solid transparent;
+				border-left: 15px solid transparent;
+
+				position: absolute;
+				left: 50%;
+				top: -30px;
+				transform: translateX(-50%);
+			}
+				
+				div.contact-address.pos-1::after{
+					left: 75%;
+				}
+
+			div.contact-address.expand{
+				
+			}
+
+			div.contact-address span{
+				
+			}
+
+			div.contact-address span.current{
+				
+			}
+			
 
 		section.contato div.mail{
 			max-width: 100%;
@@ -504,6 +575,7 @@ section{
 					color: #fff;
 					padding: 0px 20px;
 				}
+
 	@media only screen and (max-width: 520px) {
 		section.contatos div.container{
 			width: 100%;
