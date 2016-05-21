@@ -1,11 +1,13 @@
 
+	
+/*
 	function nxtSection(){
 		if($("section:not(.introducao, .up)").size() > 0){
 			//console.log("foi");
 			$("section:not(.introducao, .up)").first().addClass("up");
-			/*$('section.up').animate({
-			  scrollTop: 0
-			}, 1000);*/
+//			$('section.up').animate({
+//			  scrollTop: 0
+//			}, 1000);
 			$('section.up').delay(1000).addClass("scrollable");
 		}
 	}
@@ -20,6 +22,11 @@
 			$('section.up').delay(1000).addClass("scrollable");
 		}
 	}
+*/
+
+ferra = {
+	whatsapp: "+55 (22) 997804955"
+};
 
 $(function(){
 	terminou = true;
@@ -53,7 +60,8 @@ $(function(){
 		//top = document.scrollTop;
 		topp = $(this).scrollTop();
 		alt = $(this).height();
-		console.log(topp+"   ");
+		console.log(topp+"   "+alt);
+		
 		if(topp > (alt - 10)){
 			//$("section.linha-do-tempo").css({"position":"fixed", "top": "10px"});
 			$("section.linha-do-tempo").addClass("up");
@@ -62,10 +70,10 @@ $(function(){
 			$("section.linha-do-tempo").removeClass("up");
 		}
 		
-		if(topp > ((alt*2) - 20)){
+		if(topp > ((alt*2) + 70)){
 			//$("section.linha-do-tempo").css({"position":"fixed", "top": "10px"});
 			$("section.portfolio").addClass("up");
-		}else if(topp < ((alt*2) - 20)){
+		}else if(topp < ((alt*2) + 70)){
 			//$("section.linha-do-tempo").css({"position":"fixed", "top": "10px"});
 			$("section.portfolio").removeClass("up");
 		}
