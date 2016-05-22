@@ -24,13 +24,15 @@
 	}
 */
 
-ferra = {
-	whatsapp: "+55 (22) 997804955"
+contato = {
+	whatsapp: "+55 (22) 997804955",
+	skype: "live:leandro.pires.souza"
 };
 
 $(function(){
 	terminou = true;
 	var timer;
+	position = 0;
 	
 	$( document ).on( "mobileinit", function() {
 		$.mobile.loader.prototype.options.disabled = true;
@@ -139,5 +141,42 @@ $(function(){
 	$("div.img-container").click(function(){
 		$(this).removeClass("up");
 		$("section").removeClass("blurred");
+	});
+	
+	$("ul.redes li.clickable").click(function(){
+		position = $(this).position().left;
+		contact = $(this).attr("data-contato");
+		
+		console.log(contato[contact]);
+		
+		$("div.detalhe-contato span").text(contato[contact]);
+		
+		$(this).addClass("curr");
+		//$("ul.redes li.curr").css("transition", "left 1s");
+		$("ul.redes li.curr a").css("left", $(this).position().left);
+		
+		$(this).addClass("current");
+		
+		$("ul.redes li:not(.current)").addClass("blurred");
+		$("div.detalhe-contato").addClass("show");
+		
+		//$("ul.redes li.curr").css("left", 0);
+		
+		$("ul.redes li.curr a").animate({left: 0}, 500, "linear");
+	});
+	
+	$("div.detalhe-contato button.fechar").click(function(){
+		
+		$("ul.redes li:not(.current)").removeClass("blurred");
+		$("div.detalhe-contato").removeClass("show");
+		$("ul.redes li.curr a").animate({left: position, position:'relative'},{
+			duration: 500, 
+			easing: "linear", 
+			complete: function(){
+				$("ul.redes li.curr").delay(1000).queue(function() {  // Wait for 1 second.
+					$(this).removeClass("current curr").dequeue();
+				});
+			}
+		});
 	});
 });

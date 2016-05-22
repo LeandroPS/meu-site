@@ -4,11 +4,11 @@
     text-rendering: optimizeLegibility;
 }
 
-/*
+
 ::-webkit-scrollbar { 
     display: none; 
 }
-*/
+
 
 body{
 	margin: 0 auto;
@@ -33,7 +33,7 @@ section{
 	overflow-y: scroll;
 	box-sizing: border-box;
 	
-	border-top: 10px solid;
+	border-top: 11px solid;
 	
 }
 
@@ -239,7 +239,8 @@ section{
 			border-left: 4px solid;
 			border-top: 0px solid;
 			border-color: #fff;
-			height: 516px;
+/*			height: 516px;*/
+			height: 400px;
 			width: 300px;
 			left: calc(50% + 40px);
 			top: 50%;
@@ -438,6 +439,15 @@ section{
 		box-sizing: border-box;
 		margin-right: 0px;
 	}
+	
+	section.portfolio div.detalhes div.photos{
+		text-align: center;
+	}
+		section.portfolio div.detalhes div.photos img{
+			height: 100px;
+			cursor: pointer;
+			margin-right: 15px;
+		}
 }
 
 	section.contato{
@@ -487,7 +497,31 @@ section{
 				text-align: center;
 				color: #fff;
 				margin-bottom: 20px;
+				
+				filter: blur(0px);
+				-webkit-filter: blur(0px);
+				transition: filter 1s 1s, -webkit-filter 1s 1s;
+				
+				left: auto;
+				
 			}
+
+				section.contato ul.redes li a{
+					left: inherit;
+					transition: 1s;
+				}
+
+					section.contato ul.redes li.current a{
+						position: absolute;
+						left: 0px;
+						transition: 1s;
+					}
+
+				section.contato ul.redes li.blurred{
+					filter: blur(15px);
+					-webkit-filter: blur(15px);
+					transition: filter 1s, -webkit-filter 1s;
+				}
 
 				section.contato ul.redes li a, section.contato ul.redes li a:active, section.contato ul.redes li a:visited{
 					color: #fff;
@@ -545,6 +579,44 @@ section{
 			div.contact-address span.current{
 				
 			}
+
+		section.contato div.detalhe-contato{
+			max-width: calc(100% - 120px);
+/*			opacity: 0.5;*/
+			left: 50%;
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			transform: translateX(-50%);
+			height: 31px;
+			text-align: center;
+			line-height: 31px;
+			color: #fff;
+			font-size: 22px;
+    		font-weight: 600;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 1s, visibility 1s;
+		}
+
+				section.contato div.detalhe-contato.show{
+					opacity: 1;
+					visibility: visible;
+					transition: opacity 1s 1s;
+				}
+
+			section.contato div.detalhe-contato button{
+				color: #fff;
+				border: none;
+				background: transparent;
+				position: absolute;
+				right: 0px;
+				top: 50%;
+				transform: translateY(-50%);
+				
+				outline: none;
+				cursor: pointer;
+			}
 			
 
 		section.contato div.mail{
@@ -570,6 +642,8 @@ section{
 					box-sizing: border-box;
 					outline: none;
 					resize: none;
+					
+					font-family: 'Open Sans', sans-serif;
 
 					border: 0px;
 					border-radius: 3px;
