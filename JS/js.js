@@ -153,7 +153,7 @@ $(function(){
 		
 		$(this).addClass("curr");
 		//$("ul.redes li.curr").css("transition", "left 1s");
-		$("ul.redes li.curr a").css("left", $(this).position().left);
+		$("ul.redes li.curr a").css("left", $("ul.redes li.curr a").position().left);
 		
 		$(this).addClass("current");
 		
@@ -161,8 +161,11 @@ $(function(){
 		$("div.detalhe-contato").addClass("show");
 		
 		//$("ul.redes li.curr").css("left", 0);
-		
-		$("ul.redes li.curr a").animate({left: 0}, 500, "linear");
+		if($(window).width()>470){
+			$("ul.redes li.curr a").animate({left: 0}, 500, "linear");
+		}else{
+			$("ul.redes li.curr a").animate({left: ($("ul.redes").width()/2)-16}, 500, "linear");
+		}
 	});
 	
 	$("div.detalhe-contato button.fechar").click(function(){

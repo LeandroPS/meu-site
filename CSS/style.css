@@ -249,7 +249,7 @@ section{
 			
 			padding: 0px;
 			margin: 0px;
-			margin-top: 35px;
+			margin-top: 0px;
 			
 			display: flex;
 			flex-direction: column;
@@ -695,6 +695,21 @@ section{
 			section.contato ul.redes li{
 				width: 25%;
 			}
+		
+		section.contato div.detalhe-contato{
+			padding-top: 30px;
+			font-size: 16px;
+			height: 60px;
+			top: -20px;
+		}
+		
+		section.contato div.detalhe-contato button{
+			top: 0px;
+			left: 50%;
+			right: auto;
+			transform: translateX(-50%);
+		}
+		
 	}
 
 div.img-container{
