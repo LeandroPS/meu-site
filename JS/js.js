@@ -132,6 +132,11 @@ $(function(){
 		$(this).addClass("ativo");
 	});
 	
+	$("section.linha-do-tempo ul li").on("hover",function(){
+		$("section.linha-do-tempo ul li").removeClass("ativo");
+		$(this).addClass("ativo");
+	});
+	
 	$("section.portfolio div.detalhes img").click(function(){
 		$("div.img-container img").attr('src', $(this).attr('src').replace("mini", "big"));
 		$("div.img-container").addClass("up");
