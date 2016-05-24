@@ -190,6 +190,7 @@ $(function(){
 		
 		mensagem = "Nome: "+nome+"<br/>"+"Email: "+email+"</br>"+"Recado: "+recado;
 		
+		
 		emailjs.send("gmail", "mensagem", {"mensagem": mensagem})
 		.then(function(response) {
 			$("form.recado").addClass("sent");
