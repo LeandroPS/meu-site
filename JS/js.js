@@ -182,4 +182,22 @@ $(function(){
 			}
 		});
 	});
+	
+	$("form.recado").on("submit", function(){
+		nome = $("input.nome").val();
+		email = $("input.email").val();
+		recado = $("textarea.recado").val();
+		
+		mensagem = "Nome: "+nome+"<br/>"+"Email: "+email+"</br>"+"Recado: "+recado;
+		
+		emailjs.send("gmail", "mensagem", {"mensagem": mensagem})
+		.then(function(response) {
+			$("form.recado").addClass("sent");
+			$("div.resposta").addClass("show");
+		}, function(err) {
+		   console.log("FAILED. error=", err);
+		});
+		
+		return false;
+	});
 });

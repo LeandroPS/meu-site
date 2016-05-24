@@ -23,6 +23,12 @@
 			});
 		</script> -->
 		<!--<script src="JS/jquery.mobile-1.4.5.min.js"></script>-->
+		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" async></script>
+		<script type="text/javascript">
+		   (function(){
+			  emailjs.init("user_kpWfox04zchAQ1W7a2qYT");
+		   })();
+		</script>
 		<script src="JS/js.js"></script>
 		<!--<script>
 			$(function(){
@@ -158,7 +164,7 @@
 							</a>
 						</li>
 						<li data-contato="skype" class="clickable">
-							<a href="whatsapp://+5522997804955">
+							<a href="skype:live:leandro.pires.souza">
 								<span class="fa fa-skype fa-2x"></span>
 							</a>
 						</li>
@@ -175,12 +181,19 @@
 						<span></span>
 					</div>
 					<div class="mail">
-						<form class="">
-							<input type="email" placeholder="E-mail">
-							<input type="text" placeholder="Nome">
-							<textarea placeholder="Deixe seu recado aqui" data-role="none"></textarea>
-							<button>Enviar</button>
+						<form class="recado">
+							<input type="email" class="email" placeholder="E-mail">
+							<input type="text" class="nome" placeholder="Nome">
+							<textarea class="recado" placeholder="Deixe seu recado aqui" data-role="none"></textarea>
+							<button class="enviar">Enviar</button>
 						</form>
+						<div class="resposta">
+							<span class="titulo">:)</span>
+							<br/>
+							<span>Obrigado pelo seu contato</span>
+							<br/>
+							<span>estou ansioso para ler e te responder.</span>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -188,6 +201,7 @@
 				<img class="image" src="Imagens/start-it-mobile.gif">
 			</div>
 		</div>
+
 		<!--<div class="glass"></div>-->
 <!--		<script src="JS/optimized.js" async></script>-->
 	</body>
