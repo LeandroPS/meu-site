@@ -637,6 +637,7 @@ section{
 				opacity: 1;
 				
 				transition: opacity 1s, transform 1s;
+				z-index: 2;
 			}
 
 				section.contato form.sent{
@@ -685,6 +686,8 @@ section{
 					margin-top: 10px;
 					color: #fff;
 					padding: 0px 20px;
+					
+					outline: none;
 				}
 
 			section.contato div.resposta{
@@ -704,6 +707,7 @@ section{
 				opacity: 0;
 				
 				transition: opacity 1s;
+				z-index: 1;
 			}
 
 				section.contato div.resposta.show{

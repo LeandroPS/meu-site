@@ -195,7 +195,7 @@ $(function(){
 		
 		mensagem = "Nome: "+nome+"<br/>"+"Email: "+email+"</br>"+"Recado: "+recado;
 		
-		
+		$("form.recado button").prop('disabled', true);
 		emailjs.send("gmail", "mensagem", {"mensagem": mensagem})
 		.then(function(response) {
 			$("form.recado").addClass("sent");
