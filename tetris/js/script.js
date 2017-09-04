@@ -3,8 +3,8 @@ var all = 0;
 
 function next(){
   var index = $("article.show").index() +1;
-
-  $("article").removeClass("show");
+  $("article.show").removeClass("show").addClass("gone");
+  //$("article").removeClass("show");
   $("article:nth-child("+(index+1)+")").addClass("show");
 }
 
@@ -18,7 +18,7 @@ function nextAnimation(){
     });
   }else{
     setTimeout(function(){
-      $("article").removeClass("show");
+      $("article.show").removeClass("show").addClass("gone");
       $("article:nth-child(4)").addClass("show");
     }, 2500);
   }
@@ -54,6 +54,12 @@ $(function(){
       increasePoints();
       $(this).parents("div.question").stop(true, false).addClass("correct");
       nextAnimation();
+    }
+  });
+  
+  $("div.question:not(.stuck) ul li:not(.correct)").click(function(){
+    if(!$(this).parents(".question").hasClass("stuck")){
+      $(this).addClass("clicked");
     }
   });
   

@@ -28,13 +28,29 @@ section{
 }
 
   section article{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 70%;
     transform: translate(-50%, -50%);
   }
+
+    section article.show{
+      transition: opacity 1s, visibility 1s, top 1s;
+      top: 50%;
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    section article.gone{
+      top: 30%;
+      transition: opacity 1s, visibility 1s, top 1s;
+      visibility: hidden;
+      opacity: 0;
+    }
 
     section article div.content{
       position: relative;
@@ -117,10 +133,6 @@ section{
           line-height: normal;
         }
 
-      section article.show{
-        display: block;
-      }
-
       section article div.content:before{
         content: "";
         background-image: url(../images/logo.png);
@@ -201,6 +213,10 @@ div.question{
       margin: 0px 5px;
       
     }
+
+      div.question ul.answers li.wrong.clicked{
+        background: #EF9A9A;
+      }
 
       div.question ul.answers li:first-child{
         margin-left: 10px;
