@@ -11,12 +11,12 @@ function next(){
 function nextAnimation(){
   all++;
   var height = $("div.inner div.question.stuck").size()*75;
-  if(height+75<$(".content.play").outerHeight() || $("div.inner div.question:not(.stuck):not(.correct)").size()>0){
+  if(height+75<$(".content.play").outerHeight()){
     $("div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, 5000, "linear", function(){
       $(this).addClass("stuck");
       nextAnimation();
     });
-  }else if(!(height+75<$(".content.play").outerHeight())){
+  }else{
     setTimeout(function(){
       $("article").removeClass("show");
       $("article:nth-child(4)").addClass("show");
@@ -36,13 +36,13 @@ function increasePoints(){
 
 $(function(){
   
-  $("div.inner div.question").css("bottom", $(".content.play").outerHeight);
+  $("div.inner div.question").css("bottom", $(".content.play").outerHeight());
   $("button.start").click(function(){
     next();
     nextAnimation();
   });
   
-  $("div.question:not(.stuck) ul li.correct").on("click touchstart", function(){
+  $("div.question:not(.stuck) ul li.correct").click(function(){
     if(!$(this).parents(".question").hasClass("stuck")){
       increasePoints();
       $(this).parents("div.question").stop(true, false).addClass("correct");

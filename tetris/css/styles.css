@@ -207,8 +207,12 @@ div.question{
 h1 {
   font-size: 20pt;
   text-align: center;
+  margin: 10px 0px;
 }
 
+h2 {
+  text-align: center;
+}
 @media screen and (max-width: 425px) {
   
   section article div.content{
