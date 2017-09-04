@@ -36,6 +36,13 @@ function increasePoints(){
 
 $(function(){
   
+  //new_height = Math.floor($(".content.play").outerHeight()/$("div.inner div.question").first().outerHeight());
+  new_height = Math.floor($(".content.play").outerHeight()/75)*75;
+  
+  console.log($("span.advice").outerHeight());
+  $(".content.play").height(new_height + 50);
+  
+  
   $("div.inner div.question").css("bottom", $(".content.play").outerHeight());
   $("button.start").click(function(){
     next();

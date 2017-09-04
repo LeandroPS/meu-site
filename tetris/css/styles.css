@@ -82,7 +82,7 @@ section{
         display: block;
         text-align: center;
         line-height: 35px;
-        font-weight: lighter;
+        font-weight: normal;
       }
 
         .button.start{
@@ -97,12 +97,15 @@ section{
         display: block;
         background-color: azure;
         width: 100%;
-        padding: 10px 10px;
+/*        padding: 10px 10px;*/
         box-sizing: border-box;
         
         position: relative;
         z-index: 3;
         text-align: center;
+        
+        height: 50px;
+        line-height: 50px;
       }
 
         section article span.advice span.points{
@@ -111,6 +114,7 @@ section{
           border-radius: 20px;
           background: #C00D0E;
           color: #fff;
+          line-height: normal;
         }
 
       section article.show{
@@ -198,10 +202,21 @@ div.question{
       
     }
 
+      div.question ul.answers li:first-child{
+        margin-left: 10px;
+      }
+
+      div.question ul.answers li:last-child{
+        margin-right: 10px;
+      }
+
 
 
 .wrapper {
   padding: 10px;
+  font-size: 12pt;
+  font-weight: lighter;
+  font-family: 'Open Sans';
 }
 
 h1 {
@@ -212,6 +227,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-size: 14pt;
 }
 @media screen and (max-width: 425px) {
   
