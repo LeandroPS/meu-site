@@ -6,6 +6,11 @@
     <title>Tetris - Impulse, Inglês que dá futuro</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    
+    <script src="js/basic_questions.js"></script>
+    <script src="js/medium_questions.js"></script>
+    <script src="js/advanced_questions.js"></script>
+    
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
@@ -23,291 +28,51 @@
             <h1>Challenge accepted!</h1>
             Será que você consegue pensar rápido e responder perguntas em inglês sem deixar que elas se acumulem?
 
-            <button class="button start">Começar!</button>
+            <button class="button start basic">Começar!</button>
           </div>
         </div>
       </article>
       <article>
-        <div class="content play">
+        <div class="content play basic">
           <div class="inner">
             <span class="advice">Your score: <span class="points play-points">0</span></span>
-            <div class="question">
-              <span class="statement">
-                Tonight I am going <div class="line"></div> the movies.
-              </span>
-              <ul class="answers">
-                <li class="wrong">for</li>
-                <li class="correct">to</li>
-                <li class="wrong">at</li>
-                <li class="wrong">by</li>
-              </ul>
-            </div>
-            <div class="question">
-              <span class="statement">
-                When do you study?
-              </span>
-              <ul class="answers">
-                <li class="wrong">At school.</li>
-                <li class="correct">In the morning.</li>
-                
-                <li class="wrong">Sometimes.</li>
-              </ul>
-            </div>
-          
-            <div class="question">
-              <span class="statement">
-                Which is the best synonym for “happy”?
-              </span>
-              <ul class="answers">
-                <li class="wrong">upset</li>
-                <li class="correct">glad</li>
-                <li class="wrong">blue</li>
-                <li class="wrong">moron</li>
-              </ul>
-            </div>
 
-            <div class="question">
-              <span class="statement">
-                Peter <div class="line"></div> 18 years old.
-              </span>
-              <ul class="answers">
-                <li class="wrong">am</li>
-                <li class="wrong">have</li>
-                <li class="wrong">has</li>
-                <li class="correct">is</li>
-              </ul>
-            </div>
-            <div class="question">
-              <span class="statement">
-                Some day I will travel to <div class="line"></div>.
-              </span>
-              <ul class="answers">
-                <li class="wrong">the France.</li>
-                <li class="wrong">for France.</li>
-                <li class="correct">France.</li>
-              </ul>
-            </div>
-          
-            <div class="question">
-                <span class="statement">
-                  Which word is not a synonym for “beautiful”?
-                </span>
-                <ul class="answers">
-                  
-                  <li class="wrong">pretty</li>
-                  <li class="correct">hideous</li>
-                  <li class="wrong">attractive</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Which word is a synonym for “big”?
-                </span>
-                <ul class="answers">
-                  <li class="wrong">amazing</li>
-                  <li class="wrong">tiny</li>
-                  <li class="correct">huge</li>
-                  <li class="wrong">scary</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Despite <div class="line"></div> age, he is very attractive.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">your</li>
-                  <li class="correct">his</li>
-                  <li class="wrong">her</li>
-                  <li class="wrong">its</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Laura has three <div class="line"></div>.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">childs</li>
-                  <li class="wrong">child</li>
-                  <li class="wrong">childres</li>
-                  <li class="correct">children</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Where would you go to buy bread?
-                </span>
-                <ul class="answers">
-                  <li class="correct">the bakery</li>
-                  <li class="wrong">the barber shop</li>
-                  
-                  <li class="wrong">the pub</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  There is a good show <div class="line"></div>television tonight.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">in</li>
-                  <li class="wrong">of</li>
-                  <li class="wrong">at</li>
-                  <li class="correct">on</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Which word is a synonym for “realize”?
-                </span>
-                <ul class="answers">
-                  <li class="wrong">create</li>
-                  <li class="wrong">invent</li>
-                  <li class="wrong">make</li>
-                  <li class="correct">notice</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  The policemen raised <div class="line"></div>guns.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">They’re</li>
-                  <li class="wrong">They are</li>
-                  <li class="wrong">There</li>
-                  <li class="correct">Their</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Which word is a synonym for “acquire”?
-                </span>
-                <ul class="answers">
-                  <li class="wrong">demonstrate</li>
-                  <li class="wrong">testify</li>
-                  <li class="correct">obtain</li>
-                  <li class="wrong">restrict</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  The actress <div class="line"></div>a beautiful dress for the ceremony.
-                </span>
-                <ul class="answers">
-                  <li class="correct">wore</li>
-                  <li class="wrong">wear</li>
-                  <li class="wrong">weared</li>
-                  <li class="wrong">worn</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  British economy is going to face <div class="line"></div> year of recession.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">the other</li>
-                  <li class="wrong">the other</li>
-                  <li class="wrong">an other </li>
-                  <li class="correct">another</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  You should <div class="line"></div> other options before you made that decision.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">considered</li>
-                  <li class="wrong">consider</li>
-                  <li class="wrong">considers</li>
-                  <li class="correct">have considered</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  I <div class="line"></div> in this company for fourteen years and I don’t intend to leave.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">had worked</li>
-                  <li class="wrong">will work</li>
-                  <li class="correct">have worked</li>
-                  <li class="wrong">worked</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  New technologies gradually tend to <div class="line"></div> the older ones obsolete.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">reach</li>
-                  <li class="correct">rend</li>
-                  <li class="wrong">converge</li>
-                  <li class="wrong">remain</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Charles is not <div class="line"></div>enough to believe in pyramid schemes.
-                </span>
-                <ul class="answers">
-                  <li class="correct">gullible</li>
-                  <li class="wrong">clever</li>
-                  <li class="wrong">skeptical</li>
-                  <li class="wrong">keen</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  The witness statement, despite being true, was <div class="line"></div> misleading.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">thus</li>
-                  <li class="wrong">therefore</li>
-                  <li class="wrong">moreover</li>
-                  <li class="correct">nevertheless</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Which of these words is a synonym for “jeopardize”? 
-                </span>
-                <ul class="answers">
-                  <li class="correct">threaten</li>
-                  <li class="wrong">cherish</li>
-                  <li class="wrong">fester</li>
-                  <li class="wrong">encourage</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  Severe measures <div class="line"></div> to be taken to avoid undesired consequences.
-                </span>
-                <ul class="answers">
-                  <li class="correct">ought</li>
-                  <li class="wrong">should</li>
-                  <li class="wrong">are</li>
-                  <li class="wrong">has</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  If I <div class="line"></div> about his problem, I would have tried to help.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">have knew</li>
-                  <li class="wrong">have known</li>
-                  <li class="correct">had known</li>
-                  <li class="wrong">knew</li>
-                </ul>
-              </div>
-            <div class="question">
-                <span class="statement">
-                  By the time George arrives, we will <div class="line"></div> the meeting.
-                </span>
-                <ul class="answers">
-                  <li class="wrong">finish</li>
-                  <li class="correct">have finished</li>
-                  <li class="wrong">go to finish</li>
-                  <li class="wrong">finish</li>
-                </ul>
-              </div>
+          </div>
+        </div>
+      </article>
+      <article class="">
+        <div class="content">
+          <div class="wrapper">
+            <h1>Wow, impressive!</h1>
+            Você foi muito bem mas ainda não acabou, Na impulse você avança o seu aprendizado 
+
+            <button class="button start medium">Continuar!</button>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="content play medium">
+          <div class="inner">
+            <span class="advice">Your score: <span class="points play-points">0</span></span>
+
+          </div>
+        </div>
+      </article>
+      <article class="">
+        <div class="content">
+          <div class="wrapper">
+            <h1>Awesome!</h1>
+            Você chegou até aqui mas temos um ultimo nível pra você
+
+            <button class="button start advanced">Continuar!</button>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="content play advanced">
+          <div class="inner">
+            <span class="advice">Your score: <span class="points play-points">0</span></span>
+
           </div>
         </div>
       </article>
