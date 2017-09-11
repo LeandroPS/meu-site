@@ -11,7 +11,6 @@ function getDuration(level){
   console.log("duration: "+duration);
 
   return duration;
-  
 }
 
 function next(){
@@ -36,7 +35,7 @@ function nextBasicAnimation(){
     }, 2500);
   }
   
-  if($("div.content.basic div.inner div.question:not(.stuck):not(.correct)").size()==0){
+  if($("div.content.basic div.inner div.question:not(.stuck):not(.correct)").size()==0 && (height+75<$(".content.play").outerHeight())){
     setTimeout(next, 2500);
     
   }
@@ -46,7 +45,7 @@ function nextMediumAnimation(){
   all++;
   var height = $("div.content.medium div.inner div.question.stuck").size()*75;
   if(height+75<$(".content.play").outerHeight()){
-    $("div.content.medium div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, 5000, "linear", function(){
+    $("div.content.medium div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("medium"), "linear", function(){
       $(this).addClass("stuck");
       nextMediumAnimation();
     });
@@ -57,7 +56,7 @@ function nextMediumAnimation(){
     }, 2500);
   }
   
-  if($("div.content.medium div.inner div.question:not(.stuck):not(.correct)").size()==0){
+  if($("div.content.medium div.inner div.question:not(.stuck):not(.correct)").size()==0 && (height+75<$(".content.play").outerHeight())){
     setTimeout(next, 2500);
     
   }
@@ -67,7 +66,7 @@ function nextAdvancedAnimation(){
   all++;
   var height = $("div.content.advanced div.inner div.question.stuck").size()*75;
   if(height+75<$(".content.play").outerHeight()){
-    $("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, 5000, "linear", function(){
+    $("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("advanced"), "linear", function(){
       $(this).addClass("stuck");
       nextAdvancedAnimation();
     });
@@ -78,7 +77,7 @@ function nextAdvancedAnimation(){
     }, 2500);
   }
   
-  if($("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").size()==0){
+  if($("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").size()==0 && (height+75<$(".content.play").outerHeight())){
     setTimeout(next, 2500);
     
   }
