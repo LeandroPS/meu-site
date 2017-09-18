@@ -77,12 +77,14 @@ div.background{
 
 div.drawer{
   margin-top: calc(100vh - 97px);
-  width: 100%;
+  width: 100vw;
   background-color: #fff;
   padding: 20px;
   padding-top: 0px;
   overflow: hidden;
   box-sizing: border-box;
+  
+  overflow: hidden;
 }
 
 button.start, a{
@@ -199,3 +201,28 @@ a{
   .stamp.hired{
     color: #4CAF50;
   }
+
+@media (min-width: 600px) 
+{
+  .drawer{
+    margin-bottom: 20px;
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+  
+  div.background{
+
+    height: 100%;
+  }
+  
+    div.background-game{
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+  
+  .stamp{
+    left: 50%;
+  }
+}
