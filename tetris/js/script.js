@@ -1,13 +1,15 @@
 var points = 0;
 var all = 0;
 
-function getDuration(level){
+function getDuration(level, fell){
+  var seconds = fell? 750: 7000;
+  
   var stackHeight = $("div.content."+level+" div.inner div.question.stuck").size()*75;
   var frameHeight =  (new_height = Math.floor($(".content.play").outerHeight()/75)*75) + 50;
   
   var height = frameHeight - stackHeight;
   
-  var duration = Math.ceil((5000*height)/frameHeight);
+  var duration = Math.ceil((seconds*height)/frameHeight);
   console.log("duration: "+duration);
 
   return duration;
@@ -24,7 +26,7 @@ function nextBasicAnimation(){
   all++;
   var height = $("div.content.basic div.inner div.question.stuck").size()*75;
   if(height+75<$(".content.play").outerHeight()){
-    $("div.content.basic div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("basic"), "linear", function(){
+    $("div.content.basic div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("basic", false), "linear", function(){
       $(this).addClass("stuck");
       nextBasicAnimation();
     });
@@ -45,7 +47,7 @@ function nextMediumAnimation(){
   all++;
   var height = $("div.content.medium div.inner div.question.stuck").size()*75;
   if(height+75<$(".content.play").outerHeight()){
-    $("div.content.medium div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("medium"), "linear", function(){
+    $("div.content.medium div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("medium", false), "linear", function(){
       $(this).addClass("stuck");
       nextMediumAnimation();
     });
@@ -66,7 +68,7 @@ function nextAdvancedAnimation(){
   all++;
   var height = $("div.content.advanced div.inner div.question.stuck").size()*75;
   if(height+75<$(".content.play").outerHeight()){
-    $("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("advanced"), "linear", function(){
+    $("div.content.advanced div.inner div.question:not(.stuck):not(.correct)").first().addClass("current").animate({bottom: height}, getDuration("advanced", false), "linear", function(){
       $(this).addClass("stuck");
       nextAdvancedAnimation();
     });
@@ -164,10 +166,55 @@ $(function(){
     }
   });
   
-  $("div.question:not(.stuck) ul li:not(.correct)").click(function(){
+//  $("div.question:not(.stuck) ul li:not(.correct)").click(function(){
+//    if(!$(this).parents(".question").hasClass("stuck")){
+//      $(this).parents(".question").addClass("stuck");
+//      $(this).addClass("clicked");
+//    }
+//  });
+  
+  $("div.content.basic div.inner div.question:not(.stuck) ul li:not(.correct)").click(function(){
+    console.log("gotcha");
     if(!$(this).parents(".question").hasClass("stuck")){
+      var height = $("div.content.basic div.inner div.question.stuck").size()*75;
+      
       $(this).parents(".question").addClass("stuck");
       $(this).addClass("clicked");
+      
+      
+      $(this).parents(".question").stop(false, false).animate({bottom: height}, getDuration("basic", true), "linear", function(){
+        nextBasicAnimation();
+      });
+    }
+  });
+  
+  $("div.content.medium div.inner div.question:not(.stuck) ul li:not(.correct)").click(function(){
+    console.log("gotcha");
+    if(!$(this).parents(".question").hasClass("stuck")){
+      var height = $("div.content.medium div.inner div.question.stuck").size()*75;
+      
+      $(this).parents(".question").addClass("stuck");
+      $(this).addClass("clicked");
+      
+      
+      $(this).parents(".question").stop(false, false).animate({bottom: height}, getDuration("medium", true), "linear", function(){
+        nextBasicAnimation();
+      });
+    }
+  });
+  
+  $("div.content.advanced div.inner div.question:not(.stuck) ul li:not(.correct)").click(function(){
+    console.log("gotcha");
+    if(!$(this).parents(".question").hasClass("stuck")){
+      var height = $("div.content.advanced div.inner div.question.stuck").size()*75;
+      
+      $(this).parents(".question").addClass("stuck");
+      $(this).addClass("clicked");
+      
+      
+      $(this).parents(".question").stop(false, false).animate({bottom: height}, getDuration("advanced", true), "linear", function(){
+        nextBasicAnimation();
+      });
     }
   });
   

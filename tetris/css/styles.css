@@ -12,6 +12,10 @@ body{
   margin: 0 auto;
 }
 
+span.bold{
+  font-weight: bold;
+}
+
 div.background{
   background-image: url(../images/challenge.jpg);
   background-position: center;

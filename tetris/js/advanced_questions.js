@@ -13,10 +13,6 @@ var advanced_questions = [
       {
         correct: true,
         text: "obtain"
-      },
-      {
-        correct: false,
-        text: "restrict"
       }
     ]
   },
@@ -29,10 +25,7 @@ var advanced_questions = [
         correct: false,
         text: "have knew"
       },
-      {
-        correct: false,
-        text: "have known"
-      },
+      
       {
         correct: true,
         text: "had known"
@@ -56,10 +49,6 @@ var advanced_questions = [
       },
       {
         correct: false,
-        text: "go to finish"
-      },
-      {
-        correct: false,
         text: "finish"
       }
     ]
@@ -74,10 +63,6 @@ var advanced_questions = [
       {
         correct: false,
         text: "clever"
-      },
-      {
-        correct: false,
-        text: "skeptical"
       },
       {
         correct: false,
@@ -98,10 +83,6 @@ var advanced_questions = [
       },
       {
         correct: false,
-        text: "converge"
-      },
-      {
-        correct: false,
         text: "remain"
       }
     ]
@@ -112,10 +93,6 @@ var advanced_questions = [
       {
         correct: false,
         text: "thus"
-      },
-      {
-        correct: false,
-        text: "therefore"
       },
       {
         correct: false,
@@ -140,10 +117,6 @@ var advanced_questions = [
       },
       {
         correct: false,
-        text: "fester"
-      },
-      {
-        correct: false,
         text: "encourage"
       }
     ]
@@ -162,20 +135,12 @@ var advanced_questions = [
       {
         correct: false,
         text: "cannot"
-      },
-      {
-        correct: false,
-        text: "won't"
       }
     ]
   },
   {
     statement:"I've <div class='line'></div> since I was a kid.",
     options:[
-      {
-        correct: false,
-        text: "met"
-      },
       {
         correct: false,
         text: "meet"
@@ -194,10 +159,6 @@ var advanced_questions = [
     statement:"He was charged <div class='line'></div> a murder.",
     options:[
       {
-        correct: false,
-        text: "for"
-      },
-      {
         correct: true,
         text: "with"
       },
@@ -214,10 +175,6 @@ var advanced_questions = [
   {
     statement:"Megan, <div class='line'></div> son is a musician, can also sing very well.",
     options:[
-      {
-        correct: false,
-        text: "who's"
-      },
       {
         correct: false,
         text: "that"
@@ -241,10 +198,6 @@ var advanced_questions = [
       },
       {
         correct: false,
-        text: "tackled"
-      },
-      {
-        correct: false,
         text: "delt"
       },
       {
@@ -256,10 +209,6 @@ var advanced_questions = [
   {
     statement:"The senator's argument doesn't hold <div class='line'></div>.",
     options:[
-      {
-        correct: false,
-        text: "meaning"
-      },
       {
         correct: false,
         text: "valid"
@@ -279,10 +228,6 @@ var advanced_questions = [
     options:[
       {
         correct: false,
-        text: "late"
-      },
-      {
-        correct: false,
         text: "deceased"
       },
       {
@@ -295,37 +240,13 @@ var advanced_questions = [
       }
     ]
   },
-  {
-    statement:"Which word is a synonym for “acquire”?",
-    options:[
-      {
-        correct: false,
-        text: "demonstrate"
-      },
-      {
-        correct: false,
-        text: "testify"
-      },
-      {
-        correct: true,
-        text: "obtain"
-      },
-      {
-        correct: false,
-        text: "restrict"
-      }
-    ]
-  },
+  
   {
     statement:"Ann has set her <div class='line'></div> on getting a promotion.",
     options:[
       {
         correct: false,
         text: "head"
-      },
-      {
-        correct: false,
-        text: "feet"
       },
       {
         correct: false,
@@ -351,10 +272,6 @@ var advanced_questions = [
       {
         correct: false,
         text: "move"
-      },
-      {
-        correct: false,
-        text: "curve"
       }
     ]
   },
@@ -364,10 +281,6 @@ var advanced_questions = [
       {
         correct: true,
         text: "pie"
-      },
-      {
-        correct: false,
-        text: "cake"
       },
       {
         correct: false,
@@ -393,10 +306,6 @@ var advanced_questions = [
       {
         correct: true,
         text: "offer"
-      },
-      {
-        correct: false,
-        text: "shot"
       }
     ]
   },
@@ -406,10 +315,6 @@ var advanced_questions = [
       {
         correct: false,
         text: "touch"
-      },
-      {
-        correct: false,
-        text: "arrow"
       },
       {
         correct: false,
@@ -436,10 +341,6 @@ var advanced_questions = [
       {
         correct: false,
         text: "move"
-      },
-      {
-        correct: false,
-        text: "shudder"
       }
     ]
   },
@@ -455,10 +356,6 @@ var advanced_questions = [
       },
       {
         correct: false,
-        text: "should"
-      },
-      {
-        correct: false,
         text: "are"
       },
       {
@@ -468,15 +365,11 @@ var advanced_questions = [
     ]
   },
   {
-    statement:"If I <div class='line'ß></div> about his problem, I would have tried to help.",
+    statement:"If I <div class='line'></div> about his problem, I would have tried to help.",
     options:[
       {
         correct: false,
         text: "have knew"
-      },
-      {
-        correct: false,
-        text: "have known"
       },
       {
         correct: true,
@@ -492,11 +385,7 @@ var advanced_questions = [
     statement:"By the time George arrives, we will <div class='line'></div> the meeting.",
     options:[
       {
-        correct: false,
-        text: "finish"
-      },
-      {
-        correct: false,
+        correct: true,
         text: "have finished"
       },
       {

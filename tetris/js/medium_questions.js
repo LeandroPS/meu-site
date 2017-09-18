@@ -13,10 +13,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "blue"
-      },
-      {
-        correct: false,
         text: "moron"
       }
     ]
@@ -27,10 +23,6 @@ var medium_questions = [
       {
         correct: false,
         text: "considered"
-      },
-      {
-        correct: false,
-        text: "consider"
       },
       {
         correct: false,
@@ -45,10 +37,6 @@ var medium_questions = [
   {
     statement:"Which word is not a synonym for “beautiful”?",
     options:[
-      {
-        correct: false,
-        text: "good-looking"
-      },
       {
         correct: false,
         text: "pretty"
@@ -69,10 +57,6 @@ var medium_questions = [
       {
         correct: false,
         text: "had worked"
-      },
-      {
-        correct: false,
-        text: "will work"
       },
       {
         correct: true,
@@ -97,10 +81,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "are"
-      },
-      {
-        correct: false,
         text: "has"
       }
     ]
@@ -108,10 +88,6 @@ var medium_questions = [
   {
     statement:"Which word is a synonym for “big”?",
     options:[
-      {
-        correct: false,
-        text: "amazing"
-      },
       {
         correct: false,
         text: "tiny"
@@ -140,10 +116,6 @@ var medium_questions = [
       {
         correct: true,
         text: "was"
-      },
-      {
-        correct: false,
-        text: "were"
       }
     ]
   },
@@ -154,10 +126,6 @@ var medium_questions = [
       {
         correct: false,
         text: "create"
-      },
-      {
-        correct: false,
-        text: "invent"
       },
       {
         correct: false,
@@ -175,10 +143,6 @@ var medium_questions = [
       {
         correct: false,
         text: "amazing"
-      },
-      {
-        correct: false,
-        text: "fantastic"
       },
       {
         correct: false,
@@ -203,10 +167,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "weared"
-      },
-      {
-        correct: false,
         text: "worn"
       }
     ]
@@ -217,10 +177,6 @@ var medium_questions = [
       {
         correct: false,
         text: "woke up"
-      },
-      {
-        correct: false,
-        text: "wakes up"
       },
       {
         correct: false,
@@ -246,10 +202,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "might"
-      },
-      {
-        correct: false,
         text: "will"
       }
     ]
@@ -260,10 +212,6 @@ var medium_questions = [
       {
         correct: false,
         text: "didn't"
-      },
-      {
-        correct: false,
-        text: "not"
       },
       {
         correct: false,
@@ -281,10 +229,6 @@ var medium_questions = [
       {
         correct: false,
         text: "finished"
-      },
-      {
-        correct: false,
-        text: "finishing"
       },
       {
         correct: false,
@@ -309,10 +253,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "gone"
-      },
-      {
-        correct: false,
         text: "become"
       }
     ]
@@ -323,10 +263,6 @@ var medium_questions = [
       {
         correct: true,
         text: "about"
-      },
-      {
-        correct: false,
-        text: "of"
       },
       {
         correct: false,
@@ -341,10 +277,6 @@ var medium_questions = [
   {
     statement:"Which word is a synonym for “boring”?",
     options:[
-      {
-        correct: false,
-        text: "nauseating"
-      },
       {
         correct: false,
         text: "anxious"
@@ -367,10 +299,6 @@ var medium_questions = [
         text: "more crazy"
       },
       {
-        correct: false,
-        text: "crazyer"
-      },
-      {
         correct: true,
         text: "crazier"
       },
@@ -389,10 +317,6 @@ var medium_questions = [
       },
       {
         correct: false,
-        text: "gloomy"
-      },
-      {
-        correct: false,
         text: "miserable"
       },
       {
@@ -407,10 +331,6 @@ var medium_questions = [
       {
         correct: true,
         text: "shouldn't"
-      },
-      {
-        correct: false,
-        text: "don't should"
       },
       {
         correct: false,

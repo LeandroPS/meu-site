@@ -12,10 +12,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "at"
-      },
-      {
-        correct: false,
         text: "by"
       }
     ]
@@ -33,10 +29,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "night"
-      },
-      {
-        correct: false,
         text: "tuesday"
       }
     ]
@@ -44,10 +36,6 @@ var basic_questions = [
   {
     statement:"Peter <div class='line'></div> 18 years old.",
     options:[
-      {
-        correct: false,
-        text: "am"
-      },
       {
         correct: false,
         text: "have"
@@ -74,10 +62,6 @@ var basic_questions = [
         text: "a France."
       },
       {
-        correct: false,
-        text: "for France."
-      },
-      {
         correct: true,
         text: "France."
       }
@@ -93,10 +77,6 @@ var basic_questions = [
       {
         correct: true,
         text: "his"
-      },
-      {
-        correct: false,
-        text: "her"
       },
       {
         correct: false,
@@ -116,10 +96,6 @@ var basic_questions = [
         text: "child"
       },
       {
-        correct: false,
-        text: "childres"
-      },
-      {
         correct: true,
         text: "children"
       }
@@ -131,10 +107,6 @@ var basic_questions = [
       {
         correct: true,
         text: "the bakery"
-      },
-      {
-        correct: false,
-        text: "the barber shop"
       },
       {
         correct: false,
@@ -156,10 +128,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "of"
-      },
-      {
-        correct: false,
         text: "at"
       },
       {
@@ -177,10 +145,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "They are"
-      },
-      {
-        correct: false,
         text: "There"
       },
       {
@@ -192,10 +156,6 @@ var basic_questions = [
   {
     statement:"British economy is going to face <div class='line'></div> year of recession.",
     options:[
-      {
-        correct: false,
-        text: "the other"
-      },
       {
         correct: false,
         text: "the other"
@@ -222,10 +182,6 @@ var basic_questions = [
         text: "Does"
       },
       {
-        correct: false,
-        text: "Is"
-      },
-      {
         correct: true,
         text: "Do"
       }
@@ -239,17 +195,14 @@ var basic_questions = [
         text: "listen"
       },
       {
-        correct: false,
-        text: "listens"
-      },
-      {
         correct: true,
         text: "listening"
       },
       {
         correct: false,
-        text: "listened"
+        text: "listens"
       }
+      
     ]
   },
   {
@@ -266,10 +219,6 @@ var basic_questions = [
       {
         correct: false,
         text: "am"
-      },
-      {
-        correct: false,
-        text: "ain't"
       }
     ]
   },
@@ -287,10 +236,6 @@ var basic_questions = [
       {
         correct: false,
         text: "have"
-      },
-      {
-        correct: false,
-        text: "go"
       }
     ]
   },
@@ -304,10 +249,6 @@ var basic_questions = [
       {
         correct: false,
         text: "have"
-      },
-      {
-        correct: false,
-        text: "haves"
       },
       {
         correct: false,
@@ -327,10 +268,6 @@ var basic_questions = [
         text: "will go"
       },
       {
-        correct: false,
-        text: "want"
-      },
-      {
         correct: true,
         text: "went"
       }
@@ -342,10 +279,6 @@ var basic_questions = [
       {
         correct: true,
         text: "beginning"
-      },
-      {
-        correct: false,
-        text: "begining"
       },
       {
         correct: false,
@@ -370,10 +303,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "the"
-      },
-      {
-        correct: false,
         text: "at"
       }
     ]
@@ -391,10 +320,6 @@ var basic_questions = [
       },
       {
         correct: false,
-        text: "mine"
-      },
-      {
-        correct: false,
         text: "ours"
       }
     ]
@@ -409,10 +334,6 @@ var basic_questions = [
       {
         correct: false,
         text: "don't"
-      },
-      {
-        correct: false,
-        text: "no"
       },
       {
         correct: true,
