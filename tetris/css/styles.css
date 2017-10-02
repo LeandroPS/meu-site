@@ -114,6 +114,10 @@ section{
           background: #4CAF50;
         }
 
+        .button.fb{
+          background: #4CAF50;
+        }
+
       section article span.advice{
         display: block;
         background-color: azure;

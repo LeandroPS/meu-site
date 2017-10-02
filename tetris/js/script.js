@@ -2,7 +2,7 @@ var points = 0;
 var all = 0;
 
 function getDuration(level, fell){
-  var seconds = fell? 750: 7000;
+  var seconds = fell? 750: 9000;
   
   var stackHeight = $("div.content."+level+" div.inner div.question.stuck").size()*75;
   var frameHeight =  (new_height = Math.floor($(".content.play").outerHeight()/75)*75) + 50;
@@ -33,7 +33,7 @@ function nextBasicAnimation(){
   }else{
     setTimeout(function(){
       $("article.show").removeClass("show").addClass("gone");
-      $("article:nth-child(8)").removeClass("gone").addClass("show");
+      $("article.oops-1").removeClass("gone").addClass("show");
     }, 2500);
   }
   
@@ -54,7 +54,7 @@ function nextMediumAnimation(){
   }else{
     setTimeout(function(){
       $("article.show").removeClass("show").addClass("gone");
-      $("article:nth-child(8)").removeClass("gone").addClass("show");
+      $("article.oops-2").removeClass("gone").addClass("show");
     }, 2500);
   }
   
@@ -75,7 +75,7 @@ function nextAdvancedAnimation(){
   }else{
     setTimeout(function(){
       $("article.show").removeClass("show").addClass("gone");
-      $("article:nth-child(8)").removeClass("gone").addClass("show");
+      $("article.oops-3").removeClass("gone").addClass("show");
     }, 2500);
   }
   
@@ -220,5 +220,13 @@ $(function(){
   
   $("a.call").click(function(){
     $(this).text("(22) 2725-0872");
+  });
+  
+  $("button.share-with-friends").click(function(){
+    FB.ui({method: 'apprequests',
+      message: 'YOUR_MESSAGE_HERE'
+    }, function(response){
+      console.log(response);
+    });
   });
 });
